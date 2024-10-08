@@ -10,7 +10,7 @@
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 // FILE NAME      : wr_rd_test.sv
-// DESCRIPTION    : Verifies the Alternate (Word) WRITE/READ Test to 
+// DESCRIPTION    : Verifies the Alternate (BYTE) WRITE/READ Test to 
 // the same address
 // AUTHOR         : Noman Rafiq
 // AUTHOR'S EMAIL : noman.rafiq@10xengineers.ai
@@ -18,7 +18,7 @@
 // RELEASE HISTORY													 
 // ------------------------------------------------------------------
 // VERSION DATE        	AUTHOR         								 
-// 1.0     2024-Oct-03  Noman Rafiq 						 		 
+// 1.0     2024-Oct-08  Noman Rafiq 						 		 
 // ------------------------------------------------------------------
 
 `include "environment.sv"
@@ -50,28 +50,26 @@ program test(ahb3_lite ahb_intf);
       HWRITE.rand_mode(0);
       
       
-      HBURST	= 3'd0;
-      HSIZE		= 3'd1;
-      HTRANS	= 2'd2;
+      HBURST	= 3'd0;            // Single Transfer
+      HSIZE		= 3'd0;            // Byte Transfers
+      HTRANS	= 2'd2;            // NONSEQ Transfer
       
       
       // Write Operation
-      if ( cnt % 8 == 0 ) begin
+      if ( cnt % 2 == 0 ) begin
         HWRITE	= 1;
         HADDR	= wr_ptr;
-//        wr_ptr 	= wr_ptr + 4;	// Update Write Pointer (Word)
-        wr_ptr 	= wr_ptr + 2;	// Update Write Pointer (Halfword)
+		wr_ptr++;                  // Update Write Pointer (Byte)
       end
 
       // Read Operation
       else begin
       	HWRITE	= 0;
         HADDR	= rd_ptr;
-//        rd_ptr 	= rd_ptr + 4;	// Update Read Pointer (Word)
-        rd_ptr 	= rd_ptr + 2;	// Update Read Pointer (Halfword)
+		rd_ptr++;                  // Update Read Pointer (Byte)
       end
       
-      cnt = cnt + 4;
+      cnt++;
      endfunction
     
   endclass

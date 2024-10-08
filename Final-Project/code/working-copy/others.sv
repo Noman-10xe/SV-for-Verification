@@ -40,40 +40,40 @@
       case (t.HSIZE)
         /*	HSIZE == 3'b0 - BYTE Case */
         3'd0 : begin
-          if (t.HADDR[1:0] == 2'b00) begin			 		// 0th Byte
-            mem[t.HADDR]	= t.HWDATA[7:0];				// Updated Local Memory for Comparison
+          if (t.HADDR[1:0] == 2'b00) begin			 				// 0th Byte
+            mem[t.HADDR[31:2]][7:0]	= t.HWDATA[7:0];				// Updated Local Memory for Comparison
             
-            if ( t.HWDATA[7:0] == mem[t.HADDR] )
-              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[7:0]);
+            if ( t.HWDATA[7:0] == mem[t.HADDR[31:2]][7:0] )
+              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][7:0], t.HWDATA[7:0]);
             else
-              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[7:0]);
+              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][7:0], t.HWDATA[7:0]);
           end
           
-          else if (t.HADDR[1:0] == 2'b01) begin				// 1st Byte
-            mem[t.HADDR]	= t.HWDATA[15:8];				// Updated Local Memory for Comparison
+          else if (t.HADDR[1:0] == 2'b01) begin						// 1st Byte
+            mem[t.HADDR[31:2]][15:8]	= t.HWDATA[15:8];			// Updated Local Memory for Comparison
             
-            if ( t.HWDATA[15:8] == mem[t.HADDR] )
-              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[15:8]);
+            if ( t.HWDATA[15:8] == mem[t.HADDR[31:2]][15:8] )
+              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][15:8], t.HWDATA[15:8]);
             else
-              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[15:8]);
+              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][15:8], t.HWDATA[15:8]);
           end
           
-          else if (t.HADDR[1:0] == 2'b10) begin				// 2nd Byte
-            mem[t.HADDR]	= t.HWDATA[23:16];				// Updated Local Memory for Comparison
+          else if (t.HADDR[1:0] == 2'b10) begin						// 2nd Byte
+            mem[t.HADDR[31:2]][23:16]	= t.HWDATA[23:16];			// Updated Local Memory for Comparison
             
-            if ( t.HWDATA == mem[t.HADDR] )
-              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[23:16]);
+            if ( t.HWDATA[23:16] == mem[t.HADDR[31:2]][23:16] )
+              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][23:16], t.HWDATA[23:16]);
             else
-              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[23:16]);
+              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][23:16], t.HWDATA[23:16]);
           end
           
-          else if (t.HADDR[1:0] == 2'b11) begin				// 3rd Byte
-            mem[t.HADDR]	= t.HWDATA[31:24];			// Updated Local Memory for Comparison
+          else if (t.HADDR[1:0] == 2'b11) begin						// 3rd Byte
+            mem[t.HADDR[31:2]][31:24]	= t.HWDATA[31:24];			// Updated Local Memory for Comparison
             
-            if ( t.HWDATA[31:24] == mem[t.HADDR] )
-              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[31:24]);
+            if ( t.HWDATA[31:24] == mem[t.HADDR[31:2]][31:24] )
+              $display ("[SCB-PASS] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][31:24], t.HWDATA[31:24]);
             else
-              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR], t.HWDATA[31:24]);
+              $display ("[SCB-FAIL] :: (BYTE) WRITE OPERATION :: Expected = %0h, Actual = %0h", mem[t.HADDR[31:2]][31:24], t.HWDATA[31:24]);
           end
         end
 		
@@ -126,14 +126,14 @@
     //
           
 	task READ(transaction t);	
-      bit		[31		:0]	temp;							// Temp Variable for comparison
+      bit		[31		:0]	temp;								// Temp Variable for comparison
       
       case (t.HSIZE)
         
         /*	HSIZE == 3'b0 - BYTE Case */
         3'd0 : begin
-          if (t.HADDR[1:0] == 2'b00) begin			 		// 0th Byte
-            temp = mem[t.HADDR[31:2]][7:0];					// Read Value from Local Memory and store in temp
+          if (t.HADDR[1:0] == 2'b00) begin			 			// 0th Byte
+            temp = mem[t.HADDR[31:2]][7:0];						// Read Value from Local Memory and store in temp
             
             if ( t.HRDATA[7:0] == temp )
               $display ("[SCB-PASS] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[7:0]);
@@ -141,8 +141,8 @@
               $display ("[SCB-FAIL] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[7:0]);
           end
           
-          else if (t.HADDR[1:0] == 2'b01) begin				// 1st Byte
-            temp = mem[t.HADDR[31:2]][15:8];				// Updated Local Memory for Comparison
+          else if (t.HADDR[1:0] == 2'b01) begin					// 1st Byte
+            temp = mem[t.HADDR[31:2]][15:8];					// Updated Local Memory for Comparison
             
             if ( t.HRDATA[15:8] == temp )
               $display ("[SCB-PASS] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[15:8]);
@@ -150,8 +150,8 @@
               $display ("[SCB-FAIL] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[15:8]);
           end
           
-          else if (t.HADDR[1:0] == 2'b10) begin				// 2nd Byte
-            temp = mem[t.HADDR[31:2]][23:16];				// Read Value from Local Memory and store in temp
+          else if (t.HADDR[1:0] == 2'b10) begin					// 2nd Byte
+            temp = mem[t.HADDR[31:2]][23:16];					// Read Value from Local Memory and store in temp
             
             if ( t.HRDATA[23:16] == temp )
               $display ("[SCB-PASS] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[23:16]);
@@ -159,8 +159,8 @@
               $display ("[SCB-FAIL] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[23:16]);
           end
           
-          else if (t.HADDR[1:0] == 2'b11) begin				// 3rd Byte
-            temp = mem[t.HADDR[31:2]][31:24];				// Read Value from Local Memory and store in temp
+          else if (t.HADDR[1:0] == 2'b11) begin						// 3rd Byte
+            temp = mem[t.HADDR[31:2]][31:24];						// Read Value from Local Memory and store in temp
             
             if ( t.HRDATA[31:24] == temp )
               $display ("[SCB-PASS] :: (BYTE) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA[31:24]);
@@ -195,7 +195,7 @@
  		/*	HSIZE == 3'd2 - Word Case */
        	3'd2 : begin
           
-          temp = mem[t.HADDR];								// Read Value from Local Memory and store in temp
+          temp = mem[t.HADDR[31:2]];								// Read Value from Local Memory and store in temp
           
           if ( t.HRDATA == temp )
               $display ("[SCB-PASS] :: (WORD) READ OPERATION :: Expected = %0h, Actual = %0h", temp, t.HRDATA);

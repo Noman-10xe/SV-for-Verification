@@ -31,9 +31,9 @@
 // `include "rd_test.sv"
 // `include "wr_test.sv"
 // `include "random_wr_rd_test.sv"
- `include "wr_rd_test.sv"
-// `include "wr_rd_to_same_addr_test.sv"
-// `include "wr_rd_to_diff_addr_test.sv"
+// `include "word_wr_rd_test.sv"
+// `include "halfword_wr_rd_test.sv"
+// `include "byte_wr_rd_test.sv"
 //----------------------------------------------------------------
 
 

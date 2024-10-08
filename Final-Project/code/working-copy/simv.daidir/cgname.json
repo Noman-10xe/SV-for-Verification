@@ -1,9 +1,4 @@
 {
-    "ahb3lite_sram1rw_0000": [
-        "ahb3lite_sram1rw_0000",
-        "KGFBM",
-        "module"
-    ],
     "vcs_paramclassrepository": [
         "vcs_paramclassrepository",
         "hEeZs",
@@ -14,6 +9,31 @@
         "g8Pwx",
         "module"
     ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "ahb3lite_pkg": [
+        "ahb3lite_pkg",
+        "NECV5",
+        "module"
+    ],
+    "ahb3lite_sram1rw_0000": [
+        "ahb3lite_sram1rw_0000",
+        "KGFBM",
+        "module"
+    ],
+    "test": [
+        "test",
+        "x9Hvb",
+        "module"
+    ],
+    "ahb3_lite": [
+        "ahb3_lite",
+        "Ebqnu",
+        "module"
+    ],
     "tb_top": [
         "tb_top",
         "jdPWL",
@@ -22,26 +42,6 @@
     "...MASTER...": [
         "SIM",
         "amcQw",
-        "module"
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
-    "ahb3_lite": [
-        "ahb3_lite",
-        "Ebqnu",
-        "module"
-    ],
-    "test": [
-        "test",
-        "x9Hvb",
-        "module"
-    ],
-    "ahb3lite_pkg": [
-        "ahb3lite_pkg",
-        "NECV5",
         "module"
     ]
 }

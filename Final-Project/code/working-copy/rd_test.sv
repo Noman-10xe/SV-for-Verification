@@ -8,8 +8,9 @@
 //             www.10xengineers.ai                                 //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
-// FILE NAME      : wr_test.sv
-// DESCRIPTION    : Verifies the Simple (Word) Read Test
+// FILE NAME      : rd_test.sv
+// DESCRIPTION    : Verifies the Simple (Word, Halfowrd, Byte) Read 
+// Tests
 // AUTHOR         : Noman Rafiq
 // AUTHOR'S EMAIL : noman.rafiq@10xengineers.ai
 // ------------------------------------------------------------------
