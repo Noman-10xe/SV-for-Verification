@@ -1,0 +1,223 @@
+{
+    "CompileStrategy": "fullobj",
+    "LVLData": [
+        "SIM"
+    ],
+    "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 72981
+    },
+    "PrevCompiledModules": {
+        "test": {
+            "x9Hvb_d": {
+                "bytes": 20958,
+                "out": "x9Hvb_d.o",
+                "mod": "test",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "bytes": 19946,
+                "out": "hEeZs_d.o",
+                "mod": "vcs_paramclassrepository",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8041,
+                "out": "objs/amcQw_d.o",
+                "mod": "...MASTER...",
+                "mode": 4,
+                "checksum": 0
+            }
+        },
+        "ahb3lite_pkg": {
+            "NECV5_d": {
+                "bytes": 6488,
+                "out": "NECV5_d.o",
+                "mod": "ahb3lite_pkg",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "ahb3_lite": {
+            "Ebqnu_d": {
+                "bytes": 66955,
+                "out": "Ebqnu_d.o",
+                "mod": "ahb3_lite",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "bytes": 33435,
+                "out": "reYIK_d.o",
+                "mod": "std",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "ahb3lite_sram1rw_0000": {
+            "KGFBM_d": {
+                "bytes": 39274,
+                "out": "KGFBM_d.o",
+                "mod": "ahb3lite_sram1rw_0000",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "_vcs_unit__183695427": {
+            "g8Pwx_d": {
+                "bytes": 153439,
+                "out": "g8Pwx_d.o",
+                "mod": "_vcs_unit__183695427",
+                "mode": 4,
+                "archive": "archive.233/_47060_archive_1.a",
+                "checksum": 0
+            }
+        },
+        "tb_top": {
+            "jdPWL_d": {
+                "bytes": 14455,
+                "out": "jdPWL_d.o",
+                "mod": "tb_top",
+                "mode": 4,
+                "archive": "archive.233/_prev_archive_1.a",
+                "checksum": 0
+            }
+        }
+    },
+    "NameTable": {
+        "vcs_paramclassrepository": [
+            "vcs_paramclassrepository",
+            "hEeZs",
+            "module"
+        ],
+        "test": [
+            "test",
+            "x9Hvb",
+            "module"
+        ],
+        "_vcs_unit__183695427": [
+            "_vcs_unit__183695427",
+            "g8Pwx",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "ahb3lite_sram1rw_0000": [
+            "ahb3lite_sram1rw_0000",
+            "KGFBM",
+            "module"
+        ],
+        "ahb3lite_pkg": [
+            "ahb3lite_pkg",
+            "NECV5",
+            "module"
+        ],
+        "ahb3_lite": [
+            "ahb3_lite",
+            "Ebqnu",
+            "module"
+        ],
+        "tb_top": [
+            "tb_top",
+            "jdPWL",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "vcs_paramclassrepository",
+        "_vcs_unit__183695427",
+        "_vcs_unit__183695427",
+        "std",
+        "ahb3lite_pkg",
+        "ahb3lite_sram1rw_0000",
+        "ahb3_lite",
+        "test",
+        "tb_top"
+    ],
+    "CompileStatus": "Successful",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.274005,
+            "ru_minflt": 6729,
+            "ru_stime_sec": 0.074457999999999996,
+            "ru_nivcsw": 1,
+            "ru_nvcsw": 24,
+            "ru_maxrss_kb": 94880,
+            "ru_majflt": 0
+        },
+        "nMops": 14029,
+        "mop/quad": 2.5609711573566996,
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_minflt": 0,
+            "ru_stime_sec": 0.0,
+            "ru_nivcsw": 0,
+            "ru_nvcsw": 0,
+            "ru_maxrss_kb": 0,
+            "ru_majflt": 0
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_minflt": 241,
+            "ru_stime_sec": 0.011436999999999999,
+            "ru_nivcsw": 0,
+            "ru_nvcsw": 1,
+            "ru_maxrss_kb": 24092,
+            "ru_majflt": 0
+        },
+        "CodeGen(%)": 31.551797357048287,
+        "nQuads": 5478,
+        "mopSpeed": 111072.40410118364,
+        "totalObjSize": 226436,
+        "quadSpeed": 43371.204623728278,
+        "ru_self_end": {
+            "ru_utime_sec": 0.40031,
+            "ru_minflt": 9773,
+            "ru_stime_sec": 0.10827199999999999,
+            "ru_nivcsw": 1,
+            "ru_nvcsw": 25,
+            "ru_maxrss_kb": 103272,
+            "ru_majflt": 0
+        },
+        "Frontend(%)": 68.448202642951713,
+        "outputSizePerQuad": 41.0
+    },
+    "CurCompileUdps": {},
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.47060.json"
+    ],
+    "Misc": {
+        "cwd": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1",
+        "csrc": "csrc",
+        "archive_dir": "archive.233",
+        "daidir_abs": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/simv.daidir",
+        "csrc_abs": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/csrc",
+        "default_output_dir": "csrc",
+        "daidir": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/simv.daidir"
+    }
+}
