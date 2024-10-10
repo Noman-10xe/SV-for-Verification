@@ -1,0 +1,112 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "_vcs_unit__183695427": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "ahb3lite_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "ahb3lite_sram1rw_0000": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "ahb3_lite": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "test": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        },
+        "tb_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 483
+        }
+    },
+    "CompUnits": {
+        "x9Hvb_d": {
+            "mod": "test",
+            "archive": "archive.482/_52690_archive_1.a",
+            "out": "x9Hvb_d.o",
+            "mode": 4,
+            "bytes": 20962,
+            "checksum": 0
+        },
+        "hEeZs_d": {
+            "mod": "vcs_paramclassrepository",
+            "archive": "archive.482/_52690_archive_1.a",
+            "out": "hEeZs_d.o",
+            "mode": 4,
+            "bytes": 19954,
+            "checksum": 0
+        },
+        "jdPWL_d": {
+            "mod": "tb_top",
+            "archive": "archive.482/_52690_archive_1.a",
+            "out": "jdPWL_d.o",
+            "mode": 4,
+            "bytes": 14455,
+            "checksum": 0
+        },
+        "g8Pwx_d": {
+            "mod": "_vcs_unit__183695427",
+            "archive": "archive.482/_52690_archive_1.a",
+            "out": "g8Pwx_d.o",
+            "mode": 4,
+            "bytes": 153556,
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.482/_52690_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    19954
+                ],
+                [
+                    "g8Pwx_d.o",
+                    153556
+                ],
+                [
+                    "x9Hvb_d.o",
+                    20962
+                ],
+                [
+                    "jdPWL_d.o",
+                    14455
+                ]
+            ],
+            "size": 208927
+        }
+    ],
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "NECV5_d": {
+            "icPath": "csrc"
+        },
+        "KGFBM_d": {
+            "icPath": "csrc"
+        },
+        "Ebqnu_d": {
+            "icPath": "csrc"
+        }
+    }
+}

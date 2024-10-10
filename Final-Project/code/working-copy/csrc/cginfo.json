@@ -1,0 +1,226 @@
+{
+    "Misc": {
+        "daidir": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/simv.daidir",
+        "cwd": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1",
+        "csrc": "csrc",
+        "csrc_abs": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/csrc",
+        "archive_dir": "archive.482",
+        "daidir_abs": "/SOC-DV/SV-1/AHB3_Lite_Verification/v2.1/simv.daidir",
+        "default_output_dir": "csrc"
+    },
+    "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 74291
+    },
+    "PrevCompiledModules": {
+        "vcs_paramclassrepository": {
+            "hEeZs_d": {
+                "mode": 4,
+                "bytes": 19954,
+                "mod": "vcs_paramclassrepository",
+                "archive": "archive.482/_52690_archive_1.a",
+                "out": "hEeZs_d.o",
+                "checksum": 0
+            }
+        },
+        "ahb3lite_pkg": {
+            "NECV5_d": {
+                "mode": 4,
+                "bytes": 6488,
+                "mod": "ahb3lite_pkg",
+                "checksum": 0,
+                "out": "NECV5_d.o",
+                "archive": "archive.482/_prev_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "mode": 4,
+                "bytes": 33435,
+                "mod": "std",
+                "checksum": 0,
+                "out": "reYIK_d.o",
+                "archive": "archive.482/_prev_archive_1.a"
+            }
+        },
+        "test": {
+            "x9Hvb_d": {
+                "mode": 4,
+                "bytes": 18967,
+                "mod": "test",
+                "checksum": 0,
+                "out": "x9Hvb_d.o",
+                "archive": "archive.482/_52690_archive_1.a"
+            }
+        },
+        "ahb3_lite": {
+            "Ebqnu_d": {
+                "mode": 4,
+                "bytes": 66955,
+                "mod": "ahb3_lite",
+                "checksum": 0,
+                "out": "Ebqnu_d.o",
+                "archive": "archive.482/_prev_archive_1.a"
+            }
+        },
+        "_vcs_unit__183695427": {
+            "g8Pwx_d": {
+                "mode": 4,
+                "bytes": 153556,
+                "mod": "_vcs_unit__183695427",
+                "archive": "archive.482/_52690_archive_1.a",
+                "out": "g8Pwx_d.o",
+                "checksum": 0
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mode": 4,
+                "bytes": 8041,
+                "mod": "...MASTER...",
+                "checksum": 0,
+                "out": "objs/amcQw_d.o"
+            }
+        },
+        "ahb3lite_sram1rw_0000": {
+            "KGFBM_d": {
+                "mode": 4,
+                "bytes": 39274,
+                "mod": "ahb3lite_sram1rw_0000",
+                "checksum": 0,
+                "out": "KGFBM_d.o",
+                "archive": "archive.482/_prev_archive_1.a"
+            }
+        },
+        "tb_top": {
+            "jdPWL_d": {
+                "mode": 4,
+                "bytes": 14455,
+                "mod": "tb_top",
+                "checksum": 0,
+                "out": "jdPWL_d.o",
+                "archive": "archive.482/_52690_archive_1.a"
+            }
+        }
+    },
+    "CompileStatus": "Successful",
+    "NameTable": {
+        "vcs_paramclassrepository": [
+            "vcs_paramclassrepository",
+            "hEeZs",
+            "module"
+        ],
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "ahb3lite_pkg": [
+            "ahb3lite_pkg",
+            "NECV5",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "_vcs_unit__183695427": [
+            "_vcs_unit__183695427",
+            "g8Pwx",
+            "module"
+        ],
+        "ahb3lite_sram1rw_0000": [
+            "ahb3lite_sram1rw_0000",
+            "KGFBM",
+            "module"
+        ],
+        "ahb3_lite": [
+            "ahb3_lite",
+            "Ebqnu",
+            "module"
+        ],
+        "test": [
+            "test",
+            "x9Hvb",
+            "module"
+        ],
+        "tb_top": [
+            "tb_top",
+            "jdPWL",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "nQuads": 5811,
+        "mopSpeed": 184551.25061304562,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.15201700000000001,
+            "ru_stime_sec": 0.053652999999999999,
+            "ru_majflt": 0,
+            "ru_minflt": 6726,
+            "ru_maxrss_kb": 94624,
+            "ru_nvcsw": 24,
+            "ru_nivcsw": 22
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0068459999999999997,
+            "ru_majflt": 0,
+            "ru_minflt": 238,
+            "ru_maxrss_kb": 24084,
+            "ru_nvcsw": 1,
+            "ru_nivcsw": 0
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_majflt": 0,
+            "ru_minflt": 0,
+            "ru_maxrss_kb": 0,
+            "ru_nvcsw": 0,
+            "ru_nivcsw": 0
+        },
+        "ru_self_end": {
+            "ru_utime_sec": 0.23357700000000001,
+            "ru_stime_sec": 0.079177999999999998,
+            "ru_majflt": 0,
+            "ru_minflt": 9807,
+            "ru_maxrss_kb": 105064,
+            "ru_nvcsw": 25,
+            "ru_nivcsw": 32
+        },
+        "CodeGen(%)": 34.917821532085775,
+        "totalObjSize": 283218,
+        "Frontend(%)": 65.082178467914218,
+        "outputSizePerQuad": 48.0,
+        "nMops": 15052,
+        "quadSpeed": 71248.160863168232,
+        "mop/quad": 2.5902598520048183
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "vcs_paramclassrepository",
+        "vcs_paramclassrepository",
+        "_vcs_unit__183695427",
+        "_vcs_unit__183695427",
+        "std",
+        "ahb3lite_pkg",
+        "ahb3lite_sram1rw_0000",
+        "ahb3_lite",
+        "test",
+        "test",
+        "tb_top",
+        "tb_top"
+    ],
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileProcesses": [
+        "cgproc.52690.json"
+    ],
+    "PEModules": []
+}
