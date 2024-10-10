@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		 Write Test Program                            //
+//   								   //
+//   		  	Write Test Program                         //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -32,10 +32,10 @@ program test(ahb3_lite ahb_intf);
     bit [7:0] count;
     
     
-    //////////////////////////////////////////////////////////////////
-	//
-	// Pre-Randomize Function
-	//
+    /////////////////////////////////////////////////////////////////
+    //
+    // Pre-Randomize Function
+    //
     function void pre_randomize();
       HADDR.rand_mode(0);
       HWRITE.rand_mode(0);
@@ -45,7 +45,7 @@ program test(ahb3_lite ahb_intf);
       
       HWRITE 	= 1;
       HBURST	= 3'd0;
-      HSIZE		= 3'd2;		// Word Transfers
+      HSIZE	= 3'd2;		// Word Transfers
       HTRANS	= 2'd2;
       
       // Write Operation
@@ -53,7 +53,7 @@ program test(ahb3_lite ahb_intf);
       HADDR		= count;
 	  count = count + 4;	// Word Sized Tranfers
 	  //count = count + 2;	// Half-Word Sized Tranfers
-	  //count++;				// Byte Sized Tranfers
+	  //count++;		// Byte Sized Tranfers
       end
       
      endfunction
@@ -68,11 +68,11 @@ program test(ahb3_lite ahb_intf);
   my_trans my_tr;
   
   initial begin
-    my_tr 					= new();
-    env 					= new(ahb_intf);		// Initialization
+    my_tr 				= new();
+    env 				= new(ahb_intf);		// Initialization
     env.gen.t 				= my_tr;
-    env.gen.repeat_count 	= 10;					// Set the repeat count of generator as 10, means to generate 10 packets
-    env.run;										// Call run method for environment
+    env.gen.repeat_count 	        = 10;				// Set the repeat count of generator as 10, means to generate 10 packets
+    env.run;								// Call run method for environment
   end
     
 endprogram

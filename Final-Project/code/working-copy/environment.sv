@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		  Environment Class                            //
+//   			                                           //
+//   		  	     Environment Class                     //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -45,7 +45,7 @@ class environment;
   
   event done;					// Event for Synchronization between generator and test
   
-  virtual ahb3_lite ahb_vif;	// Virtual Interface
+  virtual ahb3_lite ahb_vif;	                // Virtual Interface
   
   
   //////////////////////////////////////////////////////////////////
@@ -54,7 +54,7 @@ class environment;
   //
   function new(virtual ahb3_lite ahb_vif);
     
-    this.ahb_vif = ahb_vif;		// Pass the actual interface from test
+    this.ahb_vif = ahb_vif;		        // Pass the actual interface from test
     
     // Initialization
     gen2drv	= new();

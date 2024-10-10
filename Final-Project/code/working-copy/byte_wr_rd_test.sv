@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		 Write/Read Test Program					   //
-//							(Bonus Task)						   //
+//   								   //
+//   		      Write/Read Test Program	                   //
+//	                    (Bonus Task)                           //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -51,7 +51,7 @@ program test(ahb3_lite ahb_intf);
       
       
       HBURST	= 3'd0;            // Single Transfer
-      HSIZE		= 3'd0;            // Byte Transfers
+      HSIZE	= 3'd0;            // Byte Transfers
       HTRANS	= 2'd2;            // NONSEQ Transfer
       
       
@@ -59,14 +59,14 @@ program test(ahb3_lite ahb_intf);
       if ( cnt % 2 == 0 ) begin
         HWRITE	= 1;
         HADDR	= wr_ptr;
-		wr_ptr++;                  // Update Write Pointer (Byte)
+	wr_ptr++;                  // Update Write Pointer (Byte)
       end
 
       // Read Operation
       else begin
       	HWRITE	= 0;
         HADDR	= rd_ptr;
-		rd_ptr++;                  // Update Read Pointer (Byte)
+	rd_ptr++;                  // Update Read Pointer (Byte)
       end
       
       cnt++;
@@ -83,9 +83,9 @@ program test(ahb3_lite ahb_intf);
   
   initial begin
     my_tr 					= new();
-    env 					= new(ahb_intf);		// Initialization
-    env.gen.t 				= my_tr;
-    env.gen.repeat_count 	= 10;					// Set the repeat count of generator as 10, means to generate 10 packets
+    env 					= new(ahb_intf);        		// Initialization
+    env.gen.t 				        = my_tr;
+    env.gen.repeat_count 	                = 10;					// Set the repeat count of generator as 10, means to generate 10 packets
     env.run;										// Call run method for environment
   end
     

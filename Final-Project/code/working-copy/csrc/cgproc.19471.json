@@ -1,0 +1,94 @@
+{
+    "CompUnits": {
+        "hEeZs_d": {
+            "archive": "archive.399/_19471_archive_1.a",
+            "mod": "vcs_paramclassrepository",
+            "out": "hEeZs_d.o",
+            "mode": 4,
+            "bytes": 19954,
+            "checksum": 0
+        },
+        "g8Pwx_d": {
+            "archive": "archive.399/_19471_archive_1.a",
+            "mod": "_vcs_unit__183695427",
+            "out": "g8Pwx_d.o",
+            "mode": 4,
+            "bytes": 155610,
+            "checksum": 0
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "_vcs_unit__183695427": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "tb_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "ahb3_lite": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "ahb3lite_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "ahb3lite_sram1rw_0000": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        },
+        "test": {
+            "Compiled": "Yes",
+            "Compiled Times": 400
+        }
+    },
+    "reusePaths": {
+        "x9Hvb_d": {
+            "icPath": "csrc"
+        },
+        "amcQw_d": {
+            "icPath": "csrc"
+        },
+        "jdPWL_d": {
+            "icPath": "csrc"
+        },
+        "KGFBM_d": {
+            "icPath": "csrc"
+        },
+        "reYIK_d": {
+            "icPath": "csrc"
+        },
+        "NECV5_d": {
+            "icPath": "csrc"
+        },
+        "Ebqnu_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.399/_19471_archive_1.a",
+            "size": 175564,
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    19954
+                ],
+                [
+                    "g8Pwx_d.o",
+                    155610
+                ]
+            ]
+        }
+    ]
+}

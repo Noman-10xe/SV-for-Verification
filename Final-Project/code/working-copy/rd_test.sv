@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		  Read Test Program                            //
+//   							           //
+//   		      Read Test Program                            //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -34,9 +34,9 @@ program test(ahb3_lite ahb_intf);
     
     
     //////////////////////////////////////////////////////////////////
-	//
-	// Pre-Randomize Function
-	//
+    //
+    // Pre-Randomize Function
+    //
     function void pre_randomize();
       HADDR.rand_mode(0);
       HBURST.rand_mode(0);
@@ -46,19 +46,18 @@ program test(ahb3_lite ahb_intf);
       HWRITE.rand_mode(0);
       
       
-      HWRITE = 0;			// Read Operation
-      
+      HWRITE    = 0;		// Read Operation
       HBURST	= 3'd0;
-      HSIZE		= 3'd2;		// Word Size Transfers
+      HSIZE	= 3'd2;		// Word Size Transfers
       HTRANS	= 2'd2;
 
       
       // Write Operation
       if ( !HWRITE ) begin
-      HADDR		= count;
+          HADDR	= count;
 	  count = count + 4;	// Word Sized Tranfers
 //	  count = count + 2;	// Halfword Sized Tranfers
-//	  count++;				// Byte Sized Tranfers
+//	  count++;		// Byte Sized Tranfers
       end
       
      endfunction
@@ -73,11 +72,11 @@ program test(ahb3_lite ahb_intf);
   my_trans my_tr;
   
   initial begin
-    my_tr 					= new();
-    env 					= new(ahb_intf);		// Initialization
+    my_tr 				= new();
+    env 				= new(ahb_intf);		// Initialization
     env.gen.t 				= my_tr;
-    env.gen.repeat_count 	= 10;					// Set the repeat count of generator as 10, means to generate 10 packets
-    env.run;										// Call run method for environment
+    env.gen.repeat_count 	        = 10;				// Set the repeat count of generator as 10, means to generate 10 packets
+    env.run;								// Call run method for environment
   end
     
 endprogram

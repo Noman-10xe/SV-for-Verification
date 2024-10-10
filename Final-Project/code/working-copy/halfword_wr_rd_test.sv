@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		 Write/Read Test Program					   //
-//							(Bonus Task)						   //
+//   								   //
+//   		        Write/Read Test Program		           //
+//			      (Bonus Task)			   //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -39,9 +39,9 @@ program test(ahb3_lite ahb_intf);
     
     
     //////////////////////////////////////////////////////////////////
-	//
-	// Pre-Randomize Function
-	//
+    //
+    // Pre-Randomize Function
+    //
     function void pre_randomize();
       HADDR.rand_mode(0);
       HBURST.rand_mode(0);
@@ -50,23 +50,23 @@ program test(ahb3_lite ahb_intf);
       HWRITE.rand_mode(0);
       
       
-      HBURST	= 3'd0;         // Single Transfer
-      HSIZE		= 3'd1;         // Halfword Transfers
-      HTRANS	= 2'd2;         // NONSEQ Transfer
+      HBURST	= 3'd0;                 // Single Transfer
+      HSIZE	= 3'd1;                 // Halfword Transfers
+      HTRANS	= 2'd2;                 // NONSEQ Transfer
       
       
       // Write Operation
       if ( cnt % 4 == 0 ) begin
         HWRITE	= 1;
         HADDR	= wr_ptr;
-        wr_ptr 	= wr_ptr + 2;	// Update Write Pointer (Halfword)
+        wr_ptr 	= wr_ptr + 2;	        // Update Write Pointer (Halfword)
       end
 
       // Read Operation
       else begin
       	HWRITE	= 0;
         HADDR	= rd_ptr;
-        rd_ptr 	= rd_ptr + 2;	// Update Read Pointer (Halfword)
+        rd_ptr 	= rd_ptr + 2;	        // Update Read Pointer (Halfword)
       end
       
       cnt = cnt+2;
@@ -82,11 +82,11 @@ program test(ahb3_lite ahb_intf);
   my_trans my_tr;
   
   initial begin
-    my_tr 					= new();
-    env 					= new(ahb_intf);		// Initialization
-    env.gen.t 				= my_tr;
+    my_tr 			= new();
+    env 			= new(ahb_intf);		        // Initialization
+    env.gen.t 			= my_tr;
     env.gen.repeat_count 	= 10;					// Set the repeat count of generator as 10, means to generate 10 packets
-    env.run;										// Call run method for environment
+    env.run;								// Call run method for environment
   end
     
 endprogram

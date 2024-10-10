@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  		  Random Write/Read Test                       //
+//   								   //
+//   		      Random Write/Read Test                       //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -34,19 +34,20 @@ program test(ahb3_lite ahb_intf);
     
     
     //////////////////////////////////////////////////////////////////
-	//
-	// Pre-Randomize Function
-	//
+    //
+    // Pre-Randomize Function
+    //
     function void pre_randomize();
       HWRITE.rand_mode(0);
       HBURST.rand_mode(0);
       HSIZE.rand_mode(0);
 
       HBURST	= 3'd0;		// SINGLE BURST Operation
-      HSIZE		= 3'd2;		// Word Sized Transfers
+      HSIZE	= 3'd2;		// Word Sized Transfers
+      
       
       // Write Operation
-      if(cnt % 2 == 0) begin
+      if(cnt % 8 == 0) begin
         HWRITE = 1;
       end
       
@@ -55,7 +56,9 @@ program test(ahb3_lite ahb_intf);
         HWRITE = 0;
       end
       
-      cnt++;
+      cnt = cnt + 4;            // For Word Operation
+//    cnt = cnt + 2;            // For Halfword Operation
+//    cnt++;                    // For Byte Operation
     endfunction
   
   endclass
@@ -71,9 +74,9 @@ program test(ahb3_lite ahb_intf);
   initial begin
     my_tr 					= new();
     env 					= new(ahb_intf);		// Initialization
-    env.gen.t 				= my_tr;
-    env.gen.repeat_count 	= 20;					// Set the repeat count of generator as 10, means to generate 10 packets
-    env.run;										// Call run method for environment
+    env.gen.t 				        = my_tr;
+    env.gen.repeat_count 	                = 20;				// Set the repeat count of generator as 10, means to generate 10 packets
+    env.run;									// Call run method for environment
   end
     
 endprogram

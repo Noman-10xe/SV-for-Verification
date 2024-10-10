@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   		  			  Monitor Class                            //
+//   								   //
+//   		          Monitor Class                            //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -38,8 +38,8 @@ class monitor;
   // Declarations
   //
   virtual ahb3_lite ahb_vif;	// Virtual Interface Handle
-  mailbox mon2sco;				// Mailbox
-  int no_transactions;			// Track Number of Transactions
+  mailbox mon2sco;		// Mailbox
+  int no_transactions;		// Track Number of Transactions
 
   
   //////////////////////////////////////////////////////////////////
@@ -74,7 +74,6 @@ class monitor;
       t.HPROT		= `MON_IF.HPROT;
       t.HTRANS		= `MON_IF.HTRANS;
       t.HSEL		= `MON_IF.HSEL;
-      //t.HWRITE 		= `MON_IF.HWRITE;
       
       // Transfer Response
       t.HREADYOUT  	= `MON_IF.HREADYOUT;
@@ -83,17 +82,18 @@ class monitor;
       // Write Case
       wait(`MON_IF.HWRITE || !`MON_IF.HWRITE);
       if (`MON_IF.HWRITE) begin
-		t.HWDATA = `MON_IF.HWDATA;       
+        t.HWDATA = `MON_IF.HWDATA;
         t.HWRITE = `MON_IF.HWRITE;
         @(posedge ahb_vif.MONITOR.HCLK);
       end
       
       // else Read Case
       else begin
-      	t.HWRITE = `MON_IF.HWRITE;
+        t.HWRITE = `MON_IF.HWRITE;
         @(posedge ahb_vif.MONITOR.HCLK);
-        t.HRDATA = `MON_IF.HRDATA;				// Slave Responds with value on next clock
-        end      
+        @(posedge ahb_vif.MONITOR.HCLK);
+        t.HRDATA = `MON_IF.HRDATA;	        // Slave Responds with value on next clock
+      end      
         mon2sco.put(t);
       
 	$display("--------- [Monitor - %0d] Parsed Data  ------", no_transactions);

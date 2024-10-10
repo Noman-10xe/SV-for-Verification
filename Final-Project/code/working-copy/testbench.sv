@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////
-//   															   //
-//   			AHB3-Lite Memory Testbench                         //
+//   							           //
+//   			AHB3-Lite Memory Testbench                 //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 //                                                                 //
@@ -17,7 +17,7 @@
 // VERSION DATE        	AUTHOR         								 
 // 1.0     2024-Sep-25  Noman Rafiq 						 		 
 // ------------------------------------------------------------------
-// KEYWORDS : AMBA AHB AHB3-Lite MEMORY TESTBENCH					 
+// KEYWORDS : AMBA AHB3-Lite MEMORY TESTBENCH					 
 // ------------------------------------------------------------------
 // PURPOSE  : Verification of AHB3-Lite Memory						 
 // ------------------------------------------------------------------
@@ -34,6 +34,8 @@
 // `include "word_wr_rd_test.sv"
 // `include "halfword_wr_rd_test.sv"
 // `include "byte_wr_rd_test.sv"
+// `include "waited_transfer_test.sv"
+ `include "wrap4_burst_test.sv"
 //----------------------------------------------------------------
 
 
@@ -78,8 +80,8 @@ module tb_top;
     $dumpvars;
     $dumpfile("dump.vcd"); 					// Enable the wave dump
   end
-  
-  initial begin    							// Reset Generation
+ 
+  initial begin    						// Reset Generation
     HRESETn 	= 0;
     repeat (2) @(posedge HCLK); 
     HRESETn 	= 1;
