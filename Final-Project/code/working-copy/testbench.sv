@@ -34,8 +34,8 @@
 // `include "word_wr_rd_test.sv"
 // `include "halfword_wr_rd_test.sv"
 // `include "byte_wr_rd_test.sv"
-// `include "waited_transfer_test.sv"
- `include "wrap4_burst_test.sv"
+ `include "waited_transfer_test.sv"
+// `include "wrap4_burst_test.sv"
 //----------------------------------------------------------------
 
 

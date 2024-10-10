@@ -43,6 +43,7 @@ program test(ahb3_lite ahb_intf);
       HBURST.rand_mode(0);
       HSIZE.rand_mode(0);
       HREADY.rand_mode(0);
+      c_HREADY.constraint_mode(0);
       HTRANS.rand_mode(0);
       HADDR.rand_mode(0);
       

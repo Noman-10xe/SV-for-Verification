@@ -64,6 +64,7 @@ class monitor;
       
       t.HRESETn		= ahb_vif.MONITOR.HRESETn;	// Assign Value to HRESETn for Testing
 
+      //@(posedge ahb_vif.MONITOR.HCLK);
       @(posedge ahb_vif.MONITOR.HCLK);
       
       // Get Values from the Interface and put into mailbox on the clock
@@ -82,28 +83,27 @@ class monitor;
       // Write Case
       wait(`MON_IF.HWRITE || !`MON_IF.HWRITE);
       if (`MON_IF.HWRITE) begin
-        t.HWDATA = `MON_IF.HWDATA;
         t.HWRITE = `MON_IF.HWRITE;
+        t.HWDATA = `MON_IF.HWDATA;
         @(posedge ahb_vif.MONITOR.HCLK);
       end
       
       // else Read Case
       else begin
+        @(posedge ahb_vif.MONITOR.HCLK);
         t.HWRITE = `MON_IF.HWRITE;
-        @(posedge ahb_vif.MONITOR.HCLK);
-        @(posedge ahb_vif.MONITOR.HCLK);
         t.HRDATA = `MON_IF.HRDATA;	        // Slave Responds with value on next clock
       end      
         mon2sco.put(t);
       
 	$display("--------- [Monitor - %0d] Parsed Data  ------", no_transactions);
-    $display("\t HADDR 		= 0x%0h", t.HADDR);
+    $display("\t HADDR 	        = 0x%0h", t.HADDR);
     $display("\t HWDATA 	= 0x%0h", t.HWDATA);
-    $display("\t HRDATA 	= 0x%0h", t.HRDATA);
-    $display("\t HWRITE		= %0b", t.HWRITE);
-    $display("\t HSIZE 		= %0b", t.HSIZE);
-    $display("\t HBURST 	= %0b", t.HBURST);
-    $display("\t HPROT 		= %0b", t.HPROT);
+    $display("\t HRDATA         = 0x%0h", t.HRDATA);
+    $display("\t HWRITE	        = %0b", t.HWRITE);
+    $display("\t HSIZE 	        = %0b", t.HSIZE);
+    $display("\t HBURST         = %0b", t.HBURST);
+    $display("\t HPROT 	        = %0b", t.HPROT);
     $display("\t HTRANS		= %0b", t.HTRANS);
     $display("\t HREADYOUT	= %0b", t.HREADYOUT);
     $display("\t HREADY 	= %0b", t.HREADY);

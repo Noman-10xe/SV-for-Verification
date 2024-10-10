@@ -1,7 +1,7 @@
 {
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "std": [
+        "std",
+        "reYIK",
         "module"
     ],
     "vcs_paramclassrepository": [
@@ -9,29 +9,14 @@
         "hEeZs",
         "module"
     ],
-    "_vcs_unit__183695427": [
-        "_vcs_unit__183695427",
-        "g8Pwx",
-        "module"
-    ],
-    "ahb3_lite": [
-        "ahb3_lite",
-        "Ebqnu",
-        "module"
-    ],
-    "tb_top": [
-        "tb_top",
-        "jdPWL",
-        "module"
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
     "ahb3lite_pkg": [
         "ahb3lite_pkg",
         "NECV5",
+        "module"
+    ],
+    "_vcs_unit__183695427": [
+        "_vcs_unit__183695427",
+        "g8Pwx",
         "module"
     ],
     "ahb3lite_sram1rw_0000": [
@@ -39,9 +24,24 @@
         "KGFBM",
         "module"
     ],
+    "ahb3_lite": [
+        "ahb3_lite",
+        "Ebqnu",
+        "module"
+    ],
     "test": [
         "test",
         "x9Hvb",
+        "module"
+    ],
+    "tb_top": [
+        "tb_top",
+        "jdPWL",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }

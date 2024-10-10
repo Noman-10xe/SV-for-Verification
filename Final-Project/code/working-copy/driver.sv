@@ -97,16 +97,15 @@ class driver;
     
     // Write Operation
     if(trans.HWRITE) begin
-    
-    `DRIV_IF.HWRITE <= trans.HWRITE;
-    `DRIV_IF.HWDATA <= trans.HWDATA;
     @(posedge ahb_vif.DRIVER.HCLK);             // Synchronization
+    `DRIV_IF.HWDATA <= trans.HWDATA;
+    `DRIV_IF.HWRITE <= trans.HWRITE;
+    //@(posedge ahb_vif.DRIVER.HCLK);             // Synchronization    
     end
     
     // Read Operation
     else begin
     `DRIV_IF.HWRITE <= trans.HWRITE;
-    @(posedge ahb_vif.DRIVER.HCLK);
     @(posedge ahb_vif.DRIVER.HCLK);
     //`DRIV_IF.HWRITE <= trans.HWRITE;      // Update HWRITE so Driver doesn't keep driving HWRITE = 0 (Read Operation)
     trans.HRDATA = `DRIV_IF.HRDATA;
