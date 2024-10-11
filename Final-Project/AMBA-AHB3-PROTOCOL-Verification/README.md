@@ -19,8 +19,7 @@ The testbench follows a layered architecture, enabling modularity and ease of te
 2. **Driver**: Drives the generated transactions to the AHB-Lite master interface.
 3. **Monitor**: Captures bus activity and protocol compliance.
 4. **Scoreboard**: Compares actual and expected outcomes to validate correct behavior.
-5. **Assertions**: Checks for compliance with the AHB-Lite protocol, ensuring that operations like burst handling and wait state insertion behave correctly.
-
+   
 ### Prerequisites
 - A compatible simulator (VCS, ModelSim, etc.)
 - AMBA 3 AHB-Lite compliant design
