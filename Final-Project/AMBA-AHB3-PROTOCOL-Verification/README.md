@@ -8,6 +8,8 @@ The project aims to validate the functionality of the AHB-Lite interface, ensuri
 
 ## Features Verified:
 - Basic read/write operations
+- Alternate write/Read operations
+- Reset State of Memory
 - Burst transfers (single, incrementing, wrapping)
 - Address alignment based on transfer size
 - Wait state insertion via HREADY
