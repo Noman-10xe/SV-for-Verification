@@ -29,6 +29,6 @@ The testbench follows a layered architecture, enabling modularity and ease of te
 The testbench allows easy customization of the number of transactions, types of transfers, and response checks. Modify the "environment" file to tweak parameters or add new tests.
 
 ## License
-For detailed protocol specifications, refer to the [AMBA 3 AHB-Lite Protocol Specification]([[https://www.arm.com](https://www.eecs.umich.edu/courses/eecs373/readings/ARM_IHI0033A_AMBA_AHB-Lite_SPEC.pdf)].
+For detailed protocol specifications, refer to the [AMBA 3 AHB-Lite Protocol Specification]([[Protocol Specification](https://www.eecs.umich.edu/courses/eecs373/readings/ARM_IHI0033A_AMBA_AHB-Lite_SPEC.pdf)].
 
 ---
