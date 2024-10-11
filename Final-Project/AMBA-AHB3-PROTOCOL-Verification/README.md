@@ -19,12 +19,7 @@ The testbench follows a layered architecture, enabling modularity and ease of te
 2. **Driver**: Drives the generated transactions to the AHB-Lite master interface.
 3. **Monitor**: Captures bus activity and protocol compliance.
 4. **Scoreboard**: Compares actual and expected outcomes to validate correct behavior.
-5. **Assertions**: Checks for compliance with the AHB-Lite protocol, ensuring that operations like burst handling and wait state insertion behave correctly.
-
-## Getting Started
-
-To set up and run the testbench, follow the steps below:
-
+   
 ### Prerequisites
 - A compatible simulator (VCS, ModelSim, etc.)
 - AMBA 3 AHB-Lite compliant design
@@ -33,8 +28,6 @@ To set up and run the testbench, follow the steps below:
 The testbench allows easy customization of the number of transactions, types of transfers, and response checks. Modify the "environment" file to tweak parameters or add new tests.
 
 ## License
-This project follows the AMBA 3 AHB-Lite Protocol Specification © ARM Limited.
-
-For detailed protocol specifications, refer to the [AMBA 3 AHB-Lite Protocol Specification](https://www.arm.com).
+For detailed protocol specifications, refer to the [AMBA 3 AHB-Lite Protocol Specification]([[Protocol Specification](https://www.eecs.umich.edu/courses/eecs373/readings/ARM_IHI0033A_AMBA_AHB-Lite_SPEC.pdf)].
 
 ---
